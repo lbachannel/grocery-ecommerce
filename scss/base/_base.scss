@@ -12,3 +12,21 @@ body {
     font-size: 1.6rem;
     font-family: 'Gordita', sans-serif;
 }
+
+/* reset tags style default */
+a {
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+a, button, input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit; /* remove default styling of tag a when displayed on mobile */
+    -webkit-tap-highlight-color: transparent; /* remove tap highlight on mobile */
+}
