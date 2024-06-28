@@ -8,7 +8,6 @@ $grid-breakpoints: (
 
 @mixin breakpoint ($key) {
     $value: map-get($map: $grid-breakpoints, $key: $key);
-    @debug $value;
     @if ($value) {
         @media (max-width: ($value - 0.02)) {
             @content;
