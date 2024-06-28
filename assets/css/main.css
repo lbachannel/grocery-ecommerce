@@ -52,6 +52,15 @@ table {
   border-spacing: 0;
 }
 
+:root {
+  --text-color: #1a162e;
+  --icon-color: brightness(0) saturate(100%) invert(10%) sepia(32%) saturate(861%) hue-rotate(210deg) brightness(97%) contrast(102%);
+}
+
+.icon {
+  filter: var(--icon-color);
+}
+
 *,
 ::after,
 ::before {
@@ -65,6 +74,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Gordita", sans-serif;
+  color: var(--text-color);
 }
 
 /* reset tags style default */
@@ -1203,13 +1213,16 @@ a, button, input, textarea, select {
     --grid-gutter-y: 90px;
   }
 }
+.top-action__btn, .top-action__group, .top-action, .navbar__link, .navbar__list, .top-bar {
+  display: flex;
+  align-items: center;
+}
+
 .header {
   background: #eee;
 }
 
 .top-bar {
-  display: flex;
-  align-items: center;
   padding: 30px 0;
 }
 
@@ -1218,16 +1231,12 @@ a, button, input, textarea, select {
   margin-right: auto;
 }
 .navbar__list {
-  display: flex;
-  align-items: center;
   column-gap: 30px;
 }
 .navbar__link {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.46;
-  display: flex;
-  align-items: center;
   column-gap: 6px;
 }
 .navbar__arrow {
@@ -1235,13 +1244,9 @@ a, button, input, textarea, select {
 }
 
 .top-action {
-  display: flex;
-  align-items: center;
   column-gap: 20px;
 }
 .top-action__group {
-  display: flex;
-  align-items: center;
   min-width: 50px;
   height: 50px;
   border-radius: 8px;
@@ -1253,9 +1258,8 @@ a, button, input, textarea, select {
 }
 .top-action__btn {
   padding: 13px 20px;
-  display: flex;
-  align-items: center;
   column-gap: 10px;
+  cursor: pointer;
 }
 .top-action__title {
   font-size: 1.5rem;
@@ -1273,6 +1277,7 @@ a, button, input, textarea, select {
   object-fit: cover;
   border-radius: 8px;
   display: block;
+  cursor: pointer;
 }
 
 .logo {
