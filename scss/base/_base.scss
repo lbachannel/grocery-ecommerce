@@ -1,3 +1,7 @@
+.icon {
+    filter: var(--icon-color);
+}
+
 *,
 ::after,
 ::before {
@@ -11,6 +15,8 @@ html {
 body {
     font-size: 1.6rem;
     font-family: 'Gordita', sans-serif;
+    color: var(--text-color);
+    background: var(--body-bg-color);
 }
 
 /* reset tags style default */
