@@ -8,8 +8,11 @@ html {
     --top-action-group-bg-color: #fff;
     --top-action-group-box-shadow: rgba(237, 237, 246, 0.2);
     --top-action-separate-bg-color: #ededf6;
-
     @include abstracts.breakpoint(lg) {
         --header-bg-color: #fff;
     }
+    // mega menu
+    --dropdown-bg-color: #fff;
+    --dropdown-box-shadow: rgba(200, 200, 200, 0.4);
+
 }

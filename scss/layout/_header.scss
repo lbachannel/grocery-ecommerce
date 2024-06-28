@@ -29,6 +29,7 @@
             display: block;
         }
     }
+    position: relative;
 }
 
 .navbar {
@@ -43,7 +44,6 @@
     margin-left: 144px;
     &__list {
         @extend %flexItemsCenter;
-        column-gap: 30px;
     }
 
     &__link {
@@ -52,10 +52,27 @@
         line-height: 1.46;
         @extend %flexItemsCenter;
         column-gap: 6px;
+        height: 50px;
+        padding: 0 15px;
     }
 
     &__arrow {
         margin-top: 3px;
+    }
+
+    &__item {
+        &:first-child &__link {
+            padding-left: 0;
+        }
+
+        &:last-child &__link {
+            padding-right: 0;
+        }
+
+        &:hover .dropdown {
+            visibility: visible;
+            opacity: 1;
+        }
     }
 }
 
