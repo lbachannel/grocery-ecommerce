@@ -10,6 +10,7 @@ html {
     --top-action-separate-bg-color: #ededf6;
     @include abstracts.breakpoint(lg) {
         --header-bg-color: #fff;
+        --header-shadow-color: rgba(237, 237, 246, 0.20);
     }
     // mega menu
     --dropdown-bg-color: #fff;

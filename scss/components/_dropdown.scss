@@ -25,10 +25,11 @@
 }
 
 .top-menu {
-    height: 100%;
+    max-height: calc(min(582px, 100vh - 154px) - 60px);
     &__main {
         width: 292px;
-        height: inherit;
+        max-height: inherit;
+        overflow-y: auto;
         border-right: 1px solid var(--top-menu-border-right-color);
     }
 }
@@ -58,6 +59,7 @@
         position: absolute;
         bottom: 0;
         right: 0;
+        filter: var(--dropdown-menu-column-icon-color);
     }
 
     &__content {
