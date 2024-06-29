@@ -65,10 +65,10 @@
     }
 
     &__item {
-        // &:hover .dropdown {
-        //     visibility: visible;
-        //     opacity: 1;
-        // }
+        &:hover .dropdown {
+            visibility: visible;
+            opacity: 1;
+        }
     }
 }
 
