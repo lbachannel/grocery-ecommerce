@@ -1579,7 +1579,7 @@ html {
 
 .top-menu {
   --main-column-width: 292px;
-  --max-inner-height: calc(min(583px, 100vh - 158px) - var(--inner-padding) * 2);
+  --max-inner-height: calc(min(583px, 100vh - 154px) - var(--inner-padding) * 2);
   position: relative;
 }
 .top-menu__main {
