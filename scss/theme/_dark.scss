@@ -18,4 +18,8 @@ html.dark {
     @include abstracts.breakpoint(lg) {
         --header-shadow-color: rgba(0, 0, 0, 0.20);
     }
+
+    // sidebar
+    --sidebar-bg-color: #292e39;
+    --sidebar-box-shadow: rgba(23, 28, 40, 0.4);
 }

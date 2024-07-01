@@ -38,11 +38,14 @@
                 content: none;
             }
         }
+
+        @include abstracts.breakpoint(sm) {
+            padding: 0 20px;
+        }
     }
 
     @include abstracts.breakpoint(lg) {
         position: initial;
-        display: block;
         padding-top: 0;
     }
 }
