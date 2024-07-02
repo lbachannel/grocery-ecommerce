@@ -4,7 +4,7 @@
     position: relative;
     margin: 40px 0;
 
-    @include abstracts.breakpoint(md) {
+    @include abstracts.screen(md) {
         margin: 30px 0;
     }
 
@@ -19,7 +19,7 @@
         width: 100%;
         padding-top: 34%; // 34% do rong the cha cua no
     
-        @include abstracts.breakpoint(md) {
+        @include abstracts.screen(md) {
             padding-top: 50%;
         }
     }
@@ -50,7 +50,7 @@
         line-height: 1.44;
         color: #fff;
 
-        @include abstracts.breakpoint(md) {
+        @include abstracts.screen(md) {
             font-size: 1.4rem;
             line-height: 1.42;
         }
@@ -73,7 +73,7 @@
             height: 14px;
             border: 4px solid #fff;
             border-radius: 50%;
-            @include abstracts.breakpoint(md) {
+            @include abstracts.screen(md) {
                 border-width: 3px;
             }
         }

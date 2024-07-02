@@ -8,7 +8,7 @@ html {
     --top-action-group-bg-color: #fff;
     --top-action-group-box-shadow: rgba(237, 237, 246, 0.2);
     --top-action-separate-bg-color: #ededf6;
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         --header-bg-color: #fff;
         --header-shadow-color: rgba(237, 237, 246, 0.20);
     }

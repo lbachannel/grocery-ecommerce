@@ -6,7 +6,7 @@ $grid-breakpoints: (
     xxl: 1400px
 );
 
-@mixin breakpoint ($key) {
+@mixin screen ($key) {
     $value: map-get($map: $grid-breakpoints, $key: $key);
     @if ($value) {
         @media (max-width: ($value - 0.02)) {
