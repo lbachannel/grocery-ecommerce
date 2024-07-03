@@ -34,6 +34,7 @@ button {
 }
 
 a, img, button, input, textarea, select {
+    outline: none;
     font-family: inherit;
     font-size: inherit;
     color: inherit; /* remove default styling of tag a when displayed on mobile */
