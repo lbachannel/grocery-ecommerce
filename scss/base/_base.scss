@@ -1,3 +1,4 @@
+@use "../abstracts";
 .icon {
     filter: var(--icon-color);
 }
@@ -28,6 +29,8 @@ button {
     outline: none;
     border: none;
     background: transparent;
+    padding: 0;
+    cursor: pointer;
 }
 
 a, img, button, input, textarea, select {
@@ -35,4 +38,11 @@ a, img, button, input, textarea, select {
     font-size: inherit;
     color: inherit; /* remove default styling of tag a when displayed on mobile */
     -webkit-tap-highlight-color: transparent; /* remove tap highlight on mobile */
+}
+
+.container {
+    @include abstracts.screen(sm) {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
 }
