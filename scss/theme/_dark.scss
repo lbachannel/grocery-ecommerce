@@ -35,4 +35,10 @@ html.dark {
     // product card
     --product-card-bg-color: #171c28;
     --product-card-shadow: rgba(0, 0, 0, 0.20);
+
+    // filter form
+    --filter-form-bg-color: #454850;
+    --filter-form-shadow: rgba(0, 0, 0, 0.40);
+    --filter-form-tag-bg-color: #171c28;
+    --filter-arrow-color: brightness(0) saturate(100%) invert(26%) sepia(4%) saturate(1302%) hue-rotate(186deg) brightness(93%) contrast(86%);
 }

@@ -43,6 +43,10 @@ a, img, button, input, textarea, select {
     -webkit-tap-highlight-color: transparent; /* remove tap highlight on mobile */
 }
 
+input {
+    background: transparent;
+}
+
 .container {
     @include abstracts.screen(sm) {
         padding-left: 20px !important;
