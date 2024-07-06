@@ -1320,6 +1320,8 @@ html.dark {
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(326deg) brightness(102%) contrast(101%);
   --body-bg-color: #292e39;
   --header-bg-color: #171c28;
+  --footer-bg-color: #171c28;
+  --footer-text-color: #9e9da6;
   --top-action-group-bg-color: #292e39;
   --top-action-group-box-shadow: rgba(0, 0, 0, 0.2);
   --top-action-separate-bg-color: #ededf6;
@@ -1353,6 +1355,7 @@ html {
   --icon-color: brightness(0) saturate(100%) invert(10%) sepia(32%) saturate(861%) hue-rotate(210deg) brightness(97%) contrast(102%);
   --body-bg-color: #f6f6f6;
   --header-bg-color: #eee;
+  --footer-bg-color: #eee;
   --top-action-group-bg-color: #fff;
   --top-action-group-box-shadow: rgba(237, 237, 246, 0.2);
   --top-action-separate-bg-color: #ededf6;
@@ -1610,6 +1613,163 @@ html {
 }
 .navbar-btn__quantity {
   margin-left: auto;
+}
+
+.footer {
+  margin-top: 50px;
+  padding: 50px 0;
+  background: var(--footer-bg-color);
+}
+.footer__row {
+  display: grid;
+  grid-template-columns: 2fr 1.3fr 1fr 1fr 1.5fr;
+  gap: 60px;
+}
+@media (max-width: 991.98px) {
+  .footer__row {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 991.98px) {
+  .footer__logo.logo {
+    margin-left: 0;
+  }
+}
+.footer__desc {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+@media (max-width: 991.98px) {
+  .footer__desc {
+    width: min(400px, 100%);
+  }
+}
+.footer__help-text {
+  margin-top: 40px;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+.footer__heading {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.8rem;
+}
+.footer__list {
+  margin-top: 18px;
+}
+.footer__link, .footer__text {
+  padding: 8px 0;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.footer__link {
+  display: inline-block;
+}
+.footer__link:hover {
+  color: #0071dc;
+}
+.footer__copyright, .footer__text {
+  color: var(--footer-text-color);
+}
+.footer__label {
+  margin-top: 20px;
+  font-weight: 500;
+}
+.footer__form {
+  display: flex;
+  gap: 10px;
+  padding: 16px 0;
+}
+@media (max-width: 1199.98px) {
+  .footer__form {
+    flex-direction: column;
+  }
+}
+@media (max-width: 991.98px) {
+  .footer__form {
+    flex-direction: row;
+  }
+}
+.footer__input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #d2d1d6;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.footer__input::placeholder {
+  font-weight: 400;
+}
+@media (max-width: 991.98px) {
+  .footer__input {
+    width: 40%;
+  }
+}
+@media (max-width: 767.98px) {
+  .footer__input {
+    width: 50%;
+  }
+}
+@media (max-width: 575.98px) {
+  .footer__input {
+    flex: 1;
+  }
+}
+.footer__bottom {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 767.98px) {
+  .footer__bottom {
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+}
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #000;
+}
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  filter: grayscale(50%);
+  transition: translate 0.25s, filter 0.25s;
+}
+.footer__social-link--facebook {
+  background: #4863a9;
+}
+.footer__social-link--youtube {
+  background: #f00;
+}
+.footer__social-link--tiktok {
+  background: #000;
+}
+.footer__social-link--twitter {
+  background: #4999e6;
+}
+.footer__social-link--linkedin {
+  background: #2f71ab;
+}
+.footer__social-link:hover {
+  filter: grayscale(0%);
+  translate: 0 -3px;
+}
+.footer__social-icon {
+  width: 14px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(326deg) brightness(102%) contrast(101%);
+}
+.footer__copyright {
+  font-size: 1.4rem;
 }
 
 .logo {
@@ -2035,6 +2195,9 @@ html {
 }
 
 .product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   padding: 16px;
   border-radius: 20px;
   background: var(--product-card-bg-color);
@@ -2074,6 +2237,7 @@ html {
 .product-card__row {
   display: flex;
   align-items: center;
+  margin-top: auto;
 }
 .product-card__star {
   margin: 0 6px 0 auto;
