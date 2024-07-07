@@ -2167,6 +2167,8 @@ html {
 }
 
 .btn {
+  display: flex;
+  align-items: center;
   height: 46px;
   background: #f8f8fb;
   padding: 0 20px;
