@@ -30,6 +30,33 @@
     @include abstracts.screen(sm) {
         padding: 16px 0;
     }
+
+    &__logo {
+        @include abstracts.screen(lg) {
+            column-gap: 10px !important;
+            margin-left: 50px;
+        }
+    
+        @include abstracts.screen(md) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            margin-left: 0;
+        }
+
+        &-title {
+            @include abstracts.screen(lg) {
+                font-size: 1.8rem;
+            }
+        }
+
+        &-img {
+            @include abstracts.screen(lg) {
+                width: 24px;
+            }
+        }
+    }
 }
 
 .navbar {
@@ -168,6 +195,11 @@
     // in tablet
     @include abstracts.screen(md) {
         margin-left: 0;
+        &__signup {
+            height: 40px !important;
+            padding: 0 8px !important;
+            font-size: 1.5rem !important;
+        }
     }
 
     &__group {
