@@ -2953,4 +2953,32 @@ html {
   border-color: #ffb700;
 }
 
+.product-info {
+  padding: 60px;
+}
+.product-info__heading {
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 1.38;
+}
+
+.product-property {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+}
+.product-property__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.44;
+}
+.product-property__icon {
+  align-self: flex-start;
+}
+.product-property__desc {
+  margin-top: 4px;
+  font-size: 1.4rem;
+  line-height: 1.42;
+}
+
 /*# sourceMappingURL=main.css.map */
