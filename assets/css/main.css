@@ -1397,6 +1397,7 @@ html {
   --form-placehoder-color: #d2d1d6;
   --form-tag-bg-color: #f8f8fb;
   --product-detail-bg-color: #fff;
+  --product-detail-info-bg-color: #f6f6f6;
   --breadcrumb-bg-color: #f6f6f6;
   --breadcrumb-shadow-color: rgba(237, 237, 246, 0.2);
 }
@@ -1414,6 +1415,17 @@ html {
 @media (max-width: 767.98px) {
   html {
     --auth-intro-bg-color: #fff;
+  }
+}
+@media (max-width: 767.98px) {
+  html {
+    --product-detail-bg-color: #fafafd;
+    --product-detail-info-bg-color: #fff;
+  }
+}
+@media (max-width: 767.98px) {
+  html {
+    --breadcrumb-bg-color: #fff;
   }
 }
 
@@ -1675,7 +1687,6 @@ html {
 }
 
 .footer {
-  margin-top: 50px;
   padding: 50px 0;
   background: var(--footer-bg-color);
   font-size: 1.4rem;
@@ -2686,6 +2697,7 @@ html {
 @media (max-width: 767.98px) {
   .breadcrumbs {
     gap: 16px;
+    border-radius: 20px;
   }
 }
 .breadcrumbs__link {
@@ -2707,6 +2719,9 @@ html {
   }
 }
 
+.home {
+  margin-bottom: 50px;
+}
 .home__container {
   margin-top: 40px;
 }
@@ -2904,6 +2919,7 @@ html {
 .product-page {
   display: flex;
   flex-direction: column;
+  padding-bottom: 50px;
   background: var(--product-detail-bg-color);
 }
 
@@ -2976,10 +2992,15 @@ html {
     flex-direction: row-reverse;
   }
 }
+@media (max-width: 767.98px) {
+  .product-preview {
+    padding: 16px;
+  }
+}
 
 .product-info {
   padding: 60px;
-  background: #f6f6f6;
+  background: var(--product-detail-info-bg-color);
 }
 @media (max-width: 1399.98px) {
   .product-info {
@@ -2989,6 +3010,13 @@ html {
 @media (max-width: 991.98px) {
   .product-info {
     margin-top: 30px;
+  }
+}
+@media (max-width: 767.98px) {
+  .product-info {
+    border-radius: 20px;
+    padding: 0 16px 16px;
+    margin-top: 0;
   }
 }
 .product-info__heading {
@@ -3043,6 +3071,10 @@ html {
 .product-info__tag {
   background: #ededf6;
 }
+.product-info-content {
+  border-radius: 20px;
+  background: #fff;
+}
 
 .product-properties {
   padding-left: 30px;
@@ -3050,6 +3082,11 @@ html {
 @media (max-width: 1399.98px) {
   .product-properties {
     padding-left: 10px;
+  }
+}
+@media (max-width: 991.98px) {
+  .product-properties {
+    padding-left: 0;
   }
 }
 
@@ -3070,6 +3107,11 @@ html {
   margin-top: 4px;
   font-size: 1.4rem;
   line-height: 1.42;
+}
+@media (max-width: 767.98px) {
+  .product-property {
+    margin-top: 20px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

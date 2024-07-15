@@ -54,8 +54,16 @@ html {
 
     // Product detail page
     --product-detail-bg-color: #fff;
+    --product-detail-info-bg-color: #f6f6f6;
+    @include abstracts.screen(md) {
+        --product-detail-bg-color: #fafafd;
+        --product-detail-info-bg-color: #fff;
+    }
 
     // Breadcrumbs
     --breadcrumb-bg-color: #f6f6f6;
     --breadcrumb-shadow-color: rgba(237, 237, 246, 0.2);
+    @include abstracts.screen(md) {
+        --breadcrumb-bg-color: #fff;
+    }
 }
