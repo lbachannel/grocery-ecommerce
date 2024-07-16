@@ -10,6 +10,10 @@
 
 .product-container {
     margin-top: 30px;
+
+    @include abstracts.screen(md) {
+        margin-top: 20px;
+    }
 }
 
 .product-preview {
@@ -61,14 +65,14 @@
         object-fit: contain;
         border: 1.5px solid rgba(158, 157, 168, 0.3);
         border-radius: 8px;
-        cursor: pointer;
 
         opacity: 0.8;
         transition: opacity 0.25s, border-color 0.25s;
 
-        &:hover {
+        &:not(&--current):hover {
             opacity: 1;
             border-color:#9e9da8;
+            cursor: pointer;
         }
 
         &--current {
@@ -89,6 +93,7 @@
 
 .product-info {
     padding: 60px;
+    border-radius: 10px;
     background: var(--product-detail-info-bg-color);
 
     @include abstracts.screen(xxl) {
@@ -136,7 +141,8 @@
     &__tax {
         margin-left: 10px;
         padding: 2px 8px;
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), #67b044;
+        border-radius: 4px;
+        background: rgba(103, 176, 68, 0.2);
         color: #67b044;
         font-size: 1.4rem;
         font-weight: 500;
@@ -164,12 +170,12 @@
     }
 
     &__tag {
-        background: #ededf6;
+        background: var(--product-detail-info-tag-bg-color);
     }
 
     &-content {
         border-radius: 20px;
-        background: #fff;
+        background: var(--product-detail-info-content-bg-color);
     }
 }
 
@@ -204,9 +210,5 @@
         margin-top: 4px;
         font-size: 1.4rem;
         line-height: 1.42;
-    }
-
-    @include abstracts.screen(md) {
-        margin-top: 20px;
     }
 }
