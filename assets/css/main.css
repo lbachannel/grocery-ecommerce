@@ -1377,6 +1377,8 @@ html.dark {
   --breadcrumb-bg-color: #171c28;
   --breadcrumb-shadow-color: rgba(23, 28, 40, 0.2);
   --search-bar-bg-color: #171c28;
+  --review-card-bg-color: #171c28;
+  --text-content-hr-bg-color: #3d4249;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1431,6 +1433,7 @@ html {
   --breadcrumb-shadow-color: rgba(237, 237, 246, 0.2);
   --search-bar-bg-color: #fff;
   --review-card-bg-color: #fafafd;
+  --text-content-hr-bg-color: #ebebeb;
 }
 @media (max-width: 991.98px) {
   html {
@@ -1457,6 +1460,11 @@ html {
 @media (max-width: 767.98px) {
   html {
     --breadcrumb-bg-color: #fff;
+  }
+}
+@media (max-width: 767.98px) {
+  html {
+    --review-card-bg-color: #fff;
   }
 }
 
@@ -2883,12 +2891,13 @@ html {
   text-align: center;
 }
 .text-content a {
-  color: #ffb700;
+  color: #0071dc;
+  text-decoration: underline;
 }
 .text-content blockquote {
-  background: rgba(255, 183, 0, 0.1);
+  background: rgba(119, 218, 230, 0.1);
   padding: 20px;
-  border-left: 3px solid #ffb700;
+  border-left: 3px solid #77dae6;
 }
 .text-content blockquote p {
   margin: 0;
@@ -2897,7 +2906,7 @@ html {
   border: none;
   height: 1.5px;
   margin: 50px 0;
-  background: #ebebeb;
+  background: var(--text-content-hr-bg-color);
 }
 
 .home {
@@ -3338,11 +3347,14 @@ html {
 .product-tab__content--active {
   display: block;
 }
+.product-tab__text-content {
+  margin-top: -20px;
+}
 
 .product-content__heading {
   margin-bottom: 30px;
-  font-size: 2.4rem;
-  font-weight: 700;
+  font-size: 2.2rem;
+  font-weight: 600;
   line-height: 1.41;
 }
 
