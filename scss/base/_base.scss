@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+* {
+    -webkit-tap-highlight-color: transparent; /* remove tap highlight on mobile */
+}
+
 html {
     font-size: 62.5%;
 }
@@ -40,7 +44,6 @@ a, label, img, button, input, textarea, select {
     font-family: inherit;
     font-size: inherit;
     color: inherit; /* remove default styling of tag a when displayed on mobile */
-    -webkit-tap-highlight-color: transparent; /* remove tap highlight on mobile */
 }
 
 input {
@@ -52,4 +55,12 @@ input {
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
+}
+
+i, em {
+    font-style: italic;
+}
+
+b, strong {
+    font-weight: 600;
 }
