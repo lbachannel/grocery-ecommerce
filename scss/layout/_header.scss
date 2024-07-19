@@ -326,6 +326,12 @@
         border-style: solid;
     }
 
+    &__separate {
+        height: 1px;
+        background: var(--header-action-dropdown-border-color);
+        margin: 20px 0;
+    }
+
     &__row {
         display: flex;
         align-items: center;
