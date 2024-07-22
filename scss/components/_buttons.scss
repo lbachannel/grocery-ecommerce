@@ -88,6 +88,10 @@
         pointer-events: none;
     }
 
+    &--small {
+        height: 42px;
+    }
+
     &:hover {
         opacity: 0.9;
     }

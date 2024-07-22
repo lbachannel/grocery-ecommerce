@@ -94,6 +94,19 @@
     &__next-btn {
         margin-top: 30px;
     }
+
+    &__heading {
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 1.41;
+    }
+
+    &__sub-heading {
+        margin: 30px 0;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44;
+    }
 }
 
 .cart-info + .cart-info {
@@ -204,6 +217,10 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 1.46;
+
+        &-btn {
+            display: flex;
+        }
     }
 
     &__total-price {
@@ -261,5 +278,135 @@
 
         font-size: 1.4rem;
         line-height: 1.42;
+    }
+}
+
+.user-address {
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__btn {
+        @include abstracts.screen(md) {
+            height: 46px;
+        }
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44;
+    }
+
+    &__desc {
+        margin-top: 4px;
+        font-size: 1.5rem;
+        line-height: 1.46;
+    }
+
+    &__list {
+
+    }
+
+    &__message {
+        margin-top: 30px;
+        font-weight: 500;
+    }
+
+    &__link {
+        color: #0071dc;
+    }
+}
+
+.address-card {
+    display: flex;
+    margin-top: 30px;
+    gap: 16px;
+
+    @include abstracts.screen(md) {
+        flex-direction: column;
+    }
+
+    &__left {
+        flex: 1;
+        display: flex;
+        gap: 16px;
+    }
+
+    &__info {
+
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44;
+    }
+
+    &__desc {
+        width: min(520px, 90%);
+        margin-top: 4px;
+        font-size: 1.5rem;
+        line-height: 1.46;
+    }
+
+    &__list {
+        display: flex;
+        gap: 30px;
+        margin-top: 20px;
+        list-style: disc inside;
+
+        font-size: 1.4rem;
+        line-height: 1.42;
+
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        &-item {
+            margin-left: 8px;
+        }
+    }
+
+    &__control {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+
+        &-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.8rem;
+            line-height: 1.44;
+        }
+    }
+
+    &__checkbox {
+        &-input {
+            // thuoc tinh loai bo css mac dinh cua user agent
+            appearance: none;
+
+            &::before {
+                content: url("../icons/checkbox-unchecked.svg");
+            }
+
+            &:not(:checked)::before {
+                filter: var(--shipping-checkbox-color);
+            }
+
+            &:checked::before {
+                content: url("../icons/checkbox-checked.svg");
+            }
+        }
     }
 }
