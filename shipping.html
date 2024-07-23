@@ -73,7 +73,7 @@
                                         <h2 class="user-address__title">Shipping address</h2>
                                         <p class="user-address__desc">Where should we deliver your order?</p>
                                     </div>
-                                    <button class="user-address__btn btn btn--primary btn--rounded btn--small">
+                                    <button class="user-address__btn btn btn--primary btn--rounded btn--small js-toggle" toggle-target="#create-new-address">
                                         <img src="./assets/icons/plus.svg" alt="">
                                         Add a new address
                                     </button>
@@ -82,7 +82,7 @@
                                     <!-- Empty message -->
                                     <!-- <p class="user-address__message">
                                         Not address yet.
-                                        <a href="#!" class="user-address__link">Add a new address</a>
+                                        <a href="#!" class="user-address__link js-toggle" toggle-target="#create-new-address">Add a new address</a>
                                     </p> -->
                                     <!-- Address card 1 -->
                                     <article class="address-card">
@@ -103,7 +103,7 @@
                                         </div>
                                         <div class="address-card__right">
                                             <div class="address-card__control">
-                                                <button class="address-card__control-btn">
+                                                <button class="address-card__control-btn js-toggle" toggle-target="#create-new-address">
                                                     <img src="./assets/icons/edit.svg" alt="" class="icon">
                                                     Edit
                                                 </button>
@@ -131,7 +131,7 @@
                                         </div>
                                         <div class="address-card__right">
                                             <div class="address-card__control">
-                                                <button class="address-card__control-btn">
+                                                <button class="address-card__control-btn js-toggle" toggle-target="#create-new-address">
                                                     <img src="./assets/icons/edit.svg" alt="" class="icon">
                                                     Edit
                                                 </button>
@@ -368,8 +368,8 @@
         load("#footer", "./templates/footer.html");
     </script>
 
-    <!-- Modal -->
-    <div id="delete-confirm" class="modal hide">
+    <!-- Modal: confirm delete item(s) in shopping-cart -->
+    <div id="delete-confirm" class="modal modal--small hide">
         <div class="modal__content">
             <div class="modal__text">Do you want to delete ?</div>
             <div class="modal__bottom">
@@ -378,6 +378,67 @@
             </div>
         </div>
         <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
+    </div>
+
+    <!-- Modal: create new user-address -->
+    <div id="create-new-address" class="modal hide" style="--modal-content-size: 650px">
+        <div class="modal__content">
+            <h2 class="modal__heading">Add new user address</h2>
+            <div class="modal__body">
+                <form action="" class="form">
+                    <div class="form__row">
+                        <!-- Name -->
+                        <div class="form__group">
+                            <label for="name" class="form__label form__label--small">Name</label>
+                            <div class="form__text-input form__text-input--small">
+                                <input type="text" name="name" id="name" placeholder="Name" class="form__input" required minlength="2">
+                                <img src="./assets/icons/warning.svg" alt="" class="form__input-icon-error">
+                            </div>
+                            <p class="form__error">Name must be at least 2 characters</p>
+                        </div>
+                        <!-- Phone -->
+                        <div class="form__group">
+                            <label for="phone" class="form__label form__label--small">Phone</label>
+                            <div class="form__text-input form__text-input--small">
+                                <input type="tel" name="phone" id="phone" placeholder="Phone" class="form__input" required minlength="11">
+                                <img src="./assets/icons/warning.svg" alt="" class="form__input-icon-error">
+                            </div>
+                            <p class="form__error">Phone must be at least 11 numbers</p>
+                        </div>
+                    </div>
+                    <!-- Address -->
+                    <div class="form__group">
+                        <label for="address" class="form__label form__label--small">Address</label>
+                        <div class="form__text-area">
+                            <textarea name="address" id="address" placeholder="Address" class="form__text-area-input" required></textarea>
+                            <img src="./assets/icons/warning.svg" alt="" class="form__input-icon-error">
+                        </div>
+                        <p class="form__error">Address must be empty</p>
+                    </div>
+                    <!-- City -->
+                    <div class="form__group">
+                        <label for="city" class="form__label form__label--small">City</label>
+                        <div class="form__text-input form__text-input--small">
+                            <input id="city" type="text" name="" placeholder="City" class="form__input">
+                            <img src="./assets/icons/warning.svg" alt="" class="form__input-icon-error">
+                        </div>
+                        <p class="form__error">Phone must be at least 11 numbers</p>
+                    </div>
+                    <!-- Set defaul value -->
+                    <div class="form__group form__group--inline">
+                        <label class="form__checkbox">
+                            <input type="checkbox" name="" id="" class="form__checkbox-input d-none">
+                            <span class="form__checkbox-label">Set as default address</span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal__bottom">
+                <button class="btn btn--text modal__btn js-toggle" toggle-target="#create-new-address">Cancel</button>
+                <button class="btn btn--primary modal__btn btn--no-margin js-toggle" toggle-target="#create-new-address">Create</button>
+            </div>
+        </div>
+        <div class="modal__overlay"></div>
     </div>
 </body>
 </html>
