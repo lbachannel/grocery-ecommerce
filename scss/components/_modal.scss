@@ -21,31 +21,69 @@
     }
 
     @include abstracts.screen(md) {
-
-        &__bottom {
-            gap: 20px;
-        }
-
         &__btn {
             flex: 1;
         }
     }
 
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        font-size: 3.5rem;
+        padding: 3px 20px;
+        opacity: 0.7;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+    
     &__overlay {
         @extend %fill-screen;
         background: rgba($color: #000000, $alpha: 0.4);
+    }
+
+    &__heading {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.41;
+    }
+
+    &__body {
+        padding-right: 20px;
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
     }
 
     &__content {
         position: relative;
         z-index: 1;
 
-        max-width: min(450px, 100% - 40px);
-        width: 450px;
-        padding: 30px;
+        width: min(var(--modal-content-size, 800px), 100% - 40px); // Modal: medium size
+        padding: 30px 10px 30px 30px;
         border-radius: 20px;
         background: var(--modal-bg-color);
         box-shadow: 0px 20px 60px 10px var(--modal-shadow);
+
+        @include abstracts.screen(sm) {
+            padding: 20px 0 20px 20px;
+        }
+    }
+
+    &--small &__content {
+        --modal-content-size: 400px; // Modal: small size
+    }
+
+    &--large &__content {
+        --modal-content-size: 1100px; // Modal: large size
+    }
+
+    &--fill &__content {
+        width: 100%; // Modal: full size
+        height: 100%;
+        border-radius: 0;
     }
 
     &__text {
@@ -59,6 +97,11 @@
         justify-content: flex-end;
         flex-wrap: wrap;
         margin-top: 30px;
-        gap: 30px;
+        padding-right: 20px;
+        gap: 20px;
+
+        @include abstracts.screen(md) {
+            gap: 20px;
+        }
     }
 }

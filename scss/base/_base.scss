@@ -46,8 +46,18 @@ a, label, img, button, input, textarea, select {
     color: inherit; /* remove default styling of tag a when displayed on mobile */
 }
 
-input {
+input, textarea {
     background: transparent;
+}
+
+// autofill: tự động điền
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+input:-webkit-autofill:hover {
+    transition: background-color 1s 9999s;
+    -webkit-text-fill-color: var(--text-color);
+    caret-color: var(--text-color); // dấu nhấy con trỏ
 }
 
 .container {
