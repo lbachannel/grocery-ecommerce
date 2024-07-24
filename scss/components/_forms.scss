@@ -258,6 +258,7 @@ $error-color: #ed4337;
         position: absolute;
         bottom: 44px;
         left: 10px;
+        z-index: 1;
 
         display: flex;
         flex-direction: column;
@@ -268,16 +269,25 @@ $error-color: #ed4337;
 
         min-width: 230px;
         max-height: 310px;
-        padding: 10px 0;
+        padding-bottom: 10px;
         border: 1px solid #d2d1d6;
         border-radius: 10px;
+        box-shadow: 0 0 5px var(--form-select-dialog-shadow);
 
-        background: #fff;
+        background: var(--form-select-dialog-bg-color);
 
         &.show {
             opacity: 1;
             visibility: visible;
             translate: 0;
+        }
+
+        @include abstracts.screen(md) {
+            position: fixed;
+            inset: 0;
+            border-radius: 0;
+            max-width: initial;
+            max-height: initial;
         }
     }
 
@@ -285,19 +295,24 @@ $error-color: #ed4337;
         flex: 1;
         margin-top: 10px;
         overflow-y: auto;
+        overscroll-behavior: contain;
     }
 
     &__option {
         padding: 8px 20px;
         font-size: 1.4rem;
 
+        @include abstracts.screen(lg) {
+            padding: 14px 20px;
+        }
+
         &--active {
             font-weight: 500;
-            background: rgba($color: #ffb700, $alpha: 0.5);
+            background: rgba($color: #ffb700, $alpha: 0.6);
         }
 
         &:not(&--active):hover {
-            background: #ebebeb;
+            background: var(--form-option-hover-bg-color);
             cursor: pointer;
         }
     }
@@ -305,16 +320,48 @@ $error-color: #ed4337;
     &__search {
         display: flex;
         align-items: center;
-        padding: 0 20px 10px;
+        flex-shrink: 0;
+
+        height: 38px;
+        padding: 0 20px;
         border-bottom: 1px solid #d2d1d6;
 
         &-input {
             flex: 1;
-            padding-right: 10px;
+            height: 100%;
+            font-size: 1.6rem;
+
+            @include abstracts.screen(sm) {
+                padding-left: 8px;
+            }
         }
 
         &-icon {
             width: 16px;
+            margin-left: 10px;
+
+            @include abstracts.screen(sm) {
+                margin-left: 0;
+            }
         }
+
+        @include abstracts.screen(lg) {
+            height: 42px;
+        }
+
+        @include abstracts.screen(sm) {
+            flex-direction: row-reverse;
+            margin-top: 30px;
+        }
+    }
+
+    &__close-dialog {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        padding: 2px 18px;
+        opacity: 0.8;
+        font-size: 3rem;
     }
 }
