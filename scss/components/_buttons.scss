@@ -88,6 +88,11 @@
         pointer-events: none;
     }
 
+    &--danger {
+        color: #fff;
+        background: #ed4337;
+    }
+
     &--small {
         height: 42px;
     }

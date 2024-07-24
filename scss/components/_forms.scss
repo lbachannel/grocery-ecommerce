@@ -339,10 +339,6 @@ $error-color: #ed4337;
         &-icon {
             width: 16px;
             margin-left: 10px;
-
-            @include abstracts.screen(sm) {
-                margin-left: 0;
-            }
         }
 
         @include abstracts.screen(lg) {
@@ -350,8 +346,10 @@ $error-color: #ed4337;
         }
 
         @include abstracts.screen(sm) {
-            flex-direction: row-reverse;
-            margin-top: 30px;
+            border: 1px solid #d2d1d6;
+            margin: 10px 20px 0;
+            padding: 0 12px;
+            border-radius: 10px;
         }
     }
 
@@ -363,5 +361,12 @@ $error-color: #ed4337;
         padding: 2px 18px;
         opacity: 0.8;
         font-size: 3rem;
+    }
+
+    &__dialog-heading {
+        padding: 14px;
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-align: center;
     }
 }
