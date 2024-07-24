@@ -64,10 +64,6 @@ $error-color: #ed4337;
         &:focus-within {
             border-color: #77dae6;
         }
-
-        &--small {
-            border-radius: 8px;
-        }
     }
 
     &__text-area {
@@ -80,6 +76,7 @@ $error-color: #ed4337;
     }
 
     &__text-input {
+        position: relative;
         height: 50px;
 
         &--small {
@@ -254,6 +251,70 @@ $error-color: #ed4337;
 
         &:hover {
             color: var(--text-color);
+        }
+    }
+
+    &__select-dialog {
+        position: absolute;
+        bottom: 44px;
+        left: 10px;
+
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        visibility: hidden;
+        translate: 0 8px;
+        transition: opacity 0.25s, visibility 0.25s, translate 0.25s;
+
+        min-width: 230px;
+        max-height: 310px;
+        padding: 10px 0;
+        border: 1px solid #d2d1d6;
+        border-radius: 10px;
+
+        background: #fff;
+
+        &.show {
+            opacity: 1;
+            visibility: visible;
+            translate: 0;
+        }
+    }
+
+    &__options-list {
+        flex: 1;
+        margin-top: 10px;
+        overflow-y: auto;
+    }
+
+    &__option {
+        padding: 8px 20px;
+        font-size: 1.4rem;
+
+        &--active {
+            font-weight: 500;
+            background: rgba($color: #ffb700, $alpha: 0.5);
+        }
+
+        &:not(&--active):hover {
+            background: #ebebeb;
+            cursor: pointer;
+        }
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        padding: 0 20px 10px;
+        border-bottom: 1px solid #d2d1d6;
+
+        &-input {
+            flex: 1;
+            padding-right: 10px;
+        }
+
+        &-icon {
+            width: 16px;
         }
     }
 }

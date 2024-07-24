@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -419,8 +419,27 @@
                     <div class="form__group">
                         <label for="city" class="form__label form__label--small">City</label>
                         <div class="form__text-input form__text-input--small">
-                            <input id="city" type="text" name="" placeholder="City" class="form__input">
+                            <input id="city" type="text" name="" placeholder="City" class="form__input js-toggle" toggle-target="#select-city">
                             <img src="./assets/icons/warning.svg" alt="" class="form__input-icon-error">
+                            <div id="select-city" class="form__select-dialog hide">
+                                <div class="form__search">
+                                    <input type="text" placeholder="Search" class="form__search-input">
+                                    <img src="./assets/icons/search.svg" alt="" class="form__search-icon icon">
+                                </div>
+                                <ul class="form__options-list">
+                                    <li class="form__option">San Francisco</li>
+                                    <li class="form__option">Nashville</li>
+                                    <li class="form__option form__option--active">Chicago</li>
+                                    <li class="form__option">Los Angeles</li>
+                                    <li class="form__option">Boston</li>
+                                    <li class="form__option">San Diego</li>
+                                    <li class="form__option">Phoenix</li>
+                                    <li class="form__option">Houston</li>
+                                    <li class="form__option">Dallas</li>
+                                    <li class="form__option">San Antonio</li>
+                                    <li class="form__option">Washington, D.C.</li>
+                                </ul>
+                            </div>
                         </div>
                         <p class="form__error">Phone must be at least 11 numbers</p>
                     </div>
