@@ -1762,6 +1762,19 @@ html {
   display: block;
   cursor: pointer;
 }
+.top-action__dropdown {
+  right: -15px !important;
+  width: min(300px, 100vw) !important;
+}
+.top-action__dropdown-arrow {
+  right: 15px !important;
+}
+.top-action__user {
+  position: relative;
+}
+.top-action__user:hover .action-dropdown {
+  display: block;
+}
 @media (max-width: 991.98px) {
   .top-action__group--single {
     display: none;
@@ -1896,6 +1909,38 @@ html {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.46;
+}
+
+.user-menu__top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user-menu__avatar {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.user-menu__name {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+.user-menu__list {
+  margin-top: 30px;
+}
+.user-menu__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 14px 0;
+}
+.user-menu__separate {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--separate-bg-color);
 }
 
 .footer {
