@@ -105,4 +105,16 @@ html.dark {
 
     // Shipping
     --shipping-checkbox-color: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(326deg) brightness(102%) contrast(101%);
+
+    // profile
+    --profile-sidebar-bg-color: #171c28; 
+    --profile-sidebar-shadow: rgba(23, 28, 40, 0.2);
+    --profile-sidebar-link-hover: #2f3441;
+
+    // Account info
+    --account-info-bg-color: #292e39;
+    --account-info-icon-bg-color: #171c28;
+
+    // Separate
+    --separate-bg-color: #292e39;
 }
