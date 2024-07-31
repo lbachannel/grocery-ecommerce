@@ -78,5 +78,5 @@ b, strong {
 .separate {
     margin: var(--margin) 0;
     height: 1px;
-    background: #d2d1d6;
+    background: var(--separate-bg-color);
 }

@@ -130,7 +130,7 @@ b, strong {
 .separate {
   margin: var(--margin) 0;
   height: 1px;
-  background: #d2d1d6;
+  background: var(--separate-bg-color);
 }
 
 .row > *, .container-fluid, .container {
@@ -1410,6 +1410,12 @@ html.dark {
   --modal-bg-color: #454850;
   --modal-shadow: rgba(23. 28, 40, 0.4);
   --shipping-checkbox-color: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(326deg) brightness(102%) contrast(101%);
+  --profile-sidebar-bg-color: #171c28;
+  --profile-sidebar-shadow: rgba(23, 28, 40, 0.2);
+  --profile-sidebar-link-hover: #2f3441;
+  --account-info-bg-color: #292e39;
+  --account-info-icon-bg-color: #171c28;
+  --separate-bg-color: #292e39;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1480,6 +1486,12 @@ html {
   --checkout-payment-item-bg-color: #f6f6f6;
   --modal-bg-color: #fff;
   --modal-shadow: rgba(237, 237, 246, 0.20);
+  --profile-sidebar-bg-color: #fff;
+  --profile-sidebar-shadow: rgba(237, 237, 246, 0.2);
+  --profile-sidebar-link-hover: #ebebeb;
+  --account-info-bg-color: #f6f6f6;
+  --account-info-icon-bg-color: #fff;
+  --separate-bg-color: #d2d1d6;
 }
 @media (max-width: 991.98px) {
   html {
@@ -3404,6 +3416,7 @@ html {
   align-items: center;
   justify-content: center;
   height: 100%;
+  min-height: 170px;
   gap: 14px;
   border: 1px dashed #d2d1d6;
   border-radius: 10px;
@@ -3420,16 +3433,17 @@ html {
   gap: 10px;
   padding: 10px;
   border-radius: 10px;
-  background: #f6f6f6;
+  background: var(--account-info-bg-color);
 }
 .account-info__icon {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   width: 54px;
   height: 54px;
   border-radius: 8px;
-  background: #fff;
+  background: var(--account-info-icon-bg-color);
 }
 .account-info__title {
   font-size: 1.5rem;
@@ -3444,12 +3458,16 @@ html {
 
 .favourite-item {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 .favourite-item__thumb {
-  width: 151px;
-  height: 108px;
-  object-fit: contain;
+  width: 110px;
+}
+@media (max-width: 991.98px) {
+  .favourite-item__thumb {
+    width: 80px;
+  }
 }
 .favourite-item__title {
   font-size: 1.5rem;
@@ -3461,6 +3479,12 @@ html {
   align-items: center;
   gap: 20px;
   margin-top: 10px;
+}
+@media (max-width: 575.98px) {
+  .favourite-item__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .favourite-item__price {
   font-size: 2.2rem;
@@ -4414,8 +4438,8 @@ html {
 .profile__sidebar {
   padding-bottom: 30px;
   border-radius: 20px;
-  background: #fff;
-  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+  background: var(--profile-sidebar-bg-color);
+  box-shadow: 0px 20px 60px 10px var(--profile-sidebar-shadow);
   overflow: hidden;
 }
 .profile-user {
@@ -4470,7 +4494,7 @@ html {
   transition: background-color 0.2s;
 }
 .profile-menu__link:hover {
-  background: #ebebeb;
+  background: var(--profile-sidebar-link-hover);
 }
 .profile-menu__icon {
   display: flex;
