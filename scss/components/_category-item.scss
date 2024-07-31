@@ -3,13 +3,13 @@
     display: flex;
     gap: 20px;
     height: 100%;
-    padding: 20px 26px 20px 20px;
+    padding: 20px;
     border-radius: 16px;
     background: var(--category-item-bg-color);
 
     &__thumb {
-        width: 116px;
-        height: 116px;
+        width: 100px;
+        height: 100px;
         object-fit: contain;
         display: block;
         border-radius: 8px;
